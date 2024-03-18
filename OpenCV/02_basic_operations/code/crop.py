@@ -4,11 +4,11 @@ import os
 import cv2
 
 
-img = cv2.imread(os.path.join('.', 'dogs.jpg'))
+img = cv2.imread(os.path.join('.', 'Images', 'player.jpg'))
 
 print(img.shape)
 
-cropped_img = img[220:740, 320:940]
+cropped_img = img[30:280, 132:332]
 
 cv2.imshow('img', img)
 cv2.imshow('cropped_img', cropped_img)

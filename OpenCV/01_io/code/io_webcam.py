@@ -1,7 +1,7 @@
 import cv2
 
 # read webcam
-webcam = cv2.VideoCapture(2)
+webcam = cv2.VideoCapture(0)
 
 # visualize webcam
 

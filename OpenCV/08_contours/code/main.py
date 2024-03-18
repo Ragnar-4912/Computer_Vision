@@ -3,7 +3,7 @@ import os
 import cv2
 
 
-img = cv2.imread(os.path.join('.', 'birds.jpg'))
+img = cv2.imread(os.path.join('.', 'Images', 'birds.jpg'))
 
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -18,6 +18,7 @@ for cnt in contours:
         x1, y1, w, h = cv2.boundingRect(cnt)
 
         cv2.rectangle(img, (x1, y1), (x1 + w, y1 + h), (0, 255, 0), 2)
+        cv2.rectangle(thresh, (x1, y1), (x1 + w, y1 + h), (0, 255, 0), 2)
 
 cv2.imshow('img', img)
 cv2.imshow('thresh', thresh)
